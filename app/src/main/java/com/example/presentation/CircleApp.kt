@@ -154,7 +154,10 @@ fun CircleApp(container: AppContainer) {
                 ShortsScreen(videoRepository = container.videoRepository, initialVideoId = videoId)
             }
             composable("upload") {
-                UploadScreen(videoRepository = container.videoRepository)
+                UploadScreen(
+                    videoRepository = container.videoRepository,
+                    uploadRepository = container.uploadRepository
+                )
             }
             composable("following") {
                 FollowingScreen(videoRepository = container.videoRepository)

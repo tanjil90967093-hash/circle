@@ -1,12 +1,13 @@
 package com.example.di
 
-import com.example.util.GenesisMatrix
+import com.example.BuildConfig
 import io.github.jan.supabase.createSupabaseClient
 import io.github.jan.supabase.auth.Auth
 
 val supabase = createSupabaseClient(
-    supabaseUrl = GenesisMatrix.endpointUrl,
-    supabaseKey = GenesisMatrix.publicNodeKey
+    supabaseUrl = BuildConfig.SUPABASE_URL,
+    supabaseKey = BuildConfig.SUPABASE_ANON_KEY
 ) {
     install(Auth)
 }
+
